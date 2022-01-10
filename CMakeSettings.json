@@ -1,0 +1,22 @@
+﻿{
+  "configurations": [
+    {
+      "name": "x86_x64-Debug",
+      "generator": "Ninja",
+      "configurationType": "Debug",
+      "inheritEnvironments": [ "msvc_x86_x64" ],
+      "buildRoot": "${projectDir}\\out\\build\\${name}",
+      "installRoot": "${projectDir}\\out\\install\\${name}",
+      "cmakeCommandArgs": "",
+      "buildCommandArgs": "",
+      "ctestCommandArgs": "",
+      "variables": [
+        {
+          "name": "CACHE_BINARY",
+          "value": "C:\\temp\\ccache-4.5.1-windows-64\\ccache.exe",
+          "type": "FILEPATH"
+        }
+      ]
+    }
+  ]
+}
