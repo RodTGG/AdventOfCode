@@ -1,10 +1,15 @@
-option(INCLUDE_2024_01 "Include 2024 Day 1" ON)
-option(INCLUDE_2024_02 "Include 2024 Day 2" ON)
+set(DAYS
+    01
+    02
+    03)
 
-if(INCLUDE_2024_01)
-  add_subdirectory(Day01)
-endif()
+# Loop over the set of years
+foreach(DAY ${DAYS})
+  # Dynamically generate the option for each year
+  option(INCLUDE_DAY_${DAY} "Include ${DAY} year" ON)
 
-if(INCLUDE_2024_02)
-  add_subdirectory(Day02)
-endif()
+  # Add subdirectory if the option is ON
+  if (INCLUDE_DAY_${DAY})
+    add_subdirectory(Day_${DAY})
+  endif()
+endforeach()
