@@ -1,7 +1,8 @@
 set(DAYS
     01
     02
-    03)
+    03
+    04)
 
 # Loop over the set of years
 foreach(DAY ${DAYS})
